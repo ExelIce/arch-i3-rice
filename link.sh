@@ -2,7 +2,7 @@
 
 echo "Setting up dotfile symlinks..."
 
-DOTFILES="$HOME/dotfiles"
+DOTFILES="$(cd "$(dirname "$0")" && pwd)"
 
 CONFIGS=(
 i3
