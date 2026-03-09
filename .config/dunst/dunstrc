@@ -1,0 +1,4 @@
+background = "#141414"
+foreground = "#e6e6e6"
+frame_color = "#ff4f9a"
+corner_radius = 10
