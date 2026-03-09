@@ -7,12 +7,19 @@ set $brawser firefox
 
 # Font for window titles
 font pango:monospace 8
+default_border pixel 3
 
 # Gaps
 gaps inner 5
 gaps outer 12
 gaps top 37
 
+# window colors
+
+client.focused          #ff4f9a #0b0b0b #ff4f9a #ff4f9a #ff4f9a
+client.focused_inactive #333333 #0b0b0b #888888 #333333 #333333
+client.unfocused        #222222 #0b0b0b #888888 #222222 #222222
+client.urgent           #ff003c #ff003c #ffffff #ff003c #ff003c
 
 # Autostart
 exec --no-startup-id dex --autostart --environment i3
@@ -44,6 +51,7 @@ bindsym $mod+Return exec $term
 # start a rofi
 bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+Shift+d exec --no-startup-id rofi -show window
+bindsym XF86PowerOff exec ~/.config/rofi/powermenu.sh
 
 # start a file manager
 bindsym $mod+e exec $f_manager 
