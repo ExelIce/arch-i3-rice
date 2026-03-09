@@ -2,11 +2,11 @@
 set $mod Mod4
 set $term alacritty
 set $f_manager thunar
-set $brawser firefox
+set $brawser vivaldi
 
 
 # Font for window titles
-font pango:monospace 8
+font pango:JetBrainsMono Nerd Font 9
 default_border pixel 3
 
 # Gaps
@@ -25,10 +25,11 @@ client.urgent           #ff003c #ff003c #ffffff #ff003c #ff003c
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
-#exec_always --no-startup-id picom --config ~/.config/picom/picom.conf uncomment when usin host 
+exec --no-startup-id picom --config ~/.config/picom/picom.conf	 
 exec --no-startup-id dunst 
-exec_always --no-startup-id feh --bg-fill /home/rice/.wallapers/wp11886213-3827729853.jpg 
+exec_always --no-startup-id feh --bg-fill ~/arch-i3-rice/wallpapers/wp11886213-3827729853.jpg 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id setxkbmap -layout us,ru,kz -option grp:win_space_toggle
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
