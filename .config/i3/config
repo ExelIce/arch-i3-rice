@@ -67,7 +67,17 @@ exec --no-startup-id setxkbmap -layout us,ru,kz -option grp:win_space_toggle
 #               SCREENSHOTS
 #############################################
 
+# Region screenshot
 bindsym Print exec --no-startup-id flameshot gui
+
+# Full screen screenshot
+bindsym Shift+Print exec --no-startup-id flameshot full
+
+# Active window screenshot
+bindsym $mod+Print exec --no-startup-id flameshot screen
+
+# Copy region to clipboard
+bindsym Ctrl+Print exec --no-startup-id flameshot gui --clipboard
 
 
 #############################################
