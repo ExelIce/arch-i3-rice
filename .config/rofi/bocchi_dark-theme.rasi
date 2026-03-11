@@ -50,3 +50,7 @@ element selected {
 entry {
     padding: 6px;
 }
+
+prompt {
+    enabled: false;
+}
