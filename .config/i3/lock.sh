@@ -1,7 +1,7 @@
 #!/bin/bash
 
-i3lock \
--i ~/.wallapers/wp11886213-3827729853.jpg \
+i3lock-color \
+-i ~/arch-i3-rice/wallpapers//wp11886213-3827729853.jpg \
 --indicator \
 --inside-color=00000088 \
 --ring-color=ff4f9a \
