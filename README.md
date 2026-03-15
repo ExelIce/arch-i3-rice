@@ -23,5 +23,8 @@ chmod +x setup.sh
 ./setup.sh
 
 ## Screenshots
+![screenshot of workspace](scrshots_for_readme/screenshot2.png)
+![screenshot cava](scrshots_for_readme/screenshot1.png)
+![screenshot fastfetch(scrshots_for_readme/screenshot3.png)
 
 
