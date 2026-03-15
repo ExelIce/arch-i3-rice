@@ -28,6 +28,7 @@ Minimal Arch Linux setup using **i3 window manager**.
 ![workspace](scrshots_for_readme/screenshot2.png)
 ![workspace cava](scrshots_for_readme/screenshot1.png)
 ![fastfetch](scrshots_for_readme/screenshot3.png)
+![rofi](scrshots_for_readme/screenshot4.png)
 
 ## Installation
 
