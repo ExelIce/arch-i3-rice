@@ -46,6 +46,9 @@ chmod +x setup.sh
 
 Enjoy using this rice!  
 
+This rice is still a work in progress and may change over time (〃ω〃)
+
 And don't forget to watch **Bocchi the Rock!** (≧◡≦)  
 
 Have fun customizing your system (￣▽￣)  
+
