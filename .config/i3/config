@@ -50,12 +50,15 @@ exec --no-startup-id dunst
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id /usr/bin/lxqt-policykit-agent
 
-# Устанавливаем таймауты DPMS
+# DPMS timeouts
 exec_always --no-startup-id xset s 300 0
 exec_always --no-startup-id xset dpms 0 0 300
 
-# Запускаем xss-lock, чтобы слушал события и вызывал lock.sh
+# xss-lock
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/i3/lock.sh
+
+#lock bind
+bindsym Control+l exec --no-startup-id ~/.config/i3/lock.sh
 
 # Wallpaper
 exec_always --no-startup-id feh --bg-fill ~/arch-i3-rice/wallpapers/wp11886213-3827729853.jpg
