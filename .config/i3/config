@@ -58,7 +58,7 @@ exec_always --no-startup-id xset dpms 0 0 300
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/i3/lock.sh
 
 #lock bind
-bindsym Control+l exec --no-startup-id ~/.config/i3/lock.sh
+bindsym $mod+Shift+z exec --no-startup-id ~/.config/i3/lock.sh
 
 # Wallpaper
 exec_always --no-startup-id feh --bg-fill ~/arch-i3-rice/wallpapers/wp11886213-3827729853.jpg
