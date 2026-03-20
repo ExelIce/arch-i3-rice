@@ -1,0 +1,94 @@
+/* =========================
+   ОСНОВНЫЕ ЦВЕТА (АКЦЕНТ)
+   ========================= */
+
+/* активное */
+@define-color theme_selected_bg_color #ff4f9a;
+@define-color theme_selected_fg_color #000000;
+
+/* НЕАКТИВНОЕ (ВАЖНО!!!) */
+@define-color theme_unfocused_selected_bg_color #ff4f9a;
+@define-color theme_unfocused_selected_fg_color #000000;
+
+/* =========================
+   ФОН
+   ========================= */
+
+window {
+  background-color: #0b0b0b;
+}
+
+/* =========================
+   ТЕКСТ + БОРДЕРЫ
+   ========================= */
+
+* {
+  color: #e6e6e6;
+  border-color: #141414;
+}
+
+/* =========================
+   КНОПКИ
+   ========================= */
+
+button {
+  background-color: #141414;
+  border: none;
+}
+
+button:hover {
+  background-color: #ff4f9a;
+  color: #000000;
+}
+
+/* =========================
+   ГЛОБАЛЬНОЕ ВЫДЕЛЕНИЕ
+   ========================= */
+
+:selected {
+  background-color: #ff4f9a;
+  color: #000000;
+}
+
+/* =========================
+   THUNAR (ICON + LIST VIEW)
+   ========================= */
+
+.thunar .standard-view .view {
+  background-color: #0b0b0b;
+}
+
+/* активное окно */
+.thunar .standard-view .view:selected,
+.thunar .standard-view .view:selected:focus {
+  background-color: rgba(255, 79, 154, 0.35);
+  color: #ffffff;
+}
+
+/* НЕАКТИВНОЕ окно (backdrop) */
+.thunar .standard-view:backdrop .view:selected {
+  background-color: rgba(255, 79, 154, 0.35);
+  color: #ffffff;
+}
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.thunar .sidebar {
+  background-color: #0b0b0b;
+}
+
+/* выделение в sidebar — розовый текст */
+.thunar .sidebar .view *:selected {
+  background-color: #0b0b0b;
+  color: #ff4f9a;
+}
+
+/* =========================
+   НЕАКТИВНЫЕ ЭЛЕМЕНТЫ
+   ========================= */
+
+*:disabled {
+  color: #6c7086;
+}
