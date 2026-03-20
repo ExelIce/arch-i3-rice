@@ -104,6 +104,7 @@ rofi
 picom
 alacritty
 dunst
+gtk-3.0
 )
 
 mkdir -p ~/.config
