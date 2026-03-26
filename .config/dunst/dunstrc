@@ -1,4 +1,73 @@
+[global]
+
+### ШРИФТ
+font = JetBrainsMono Nerd Font 10
+
+### РАЗМЕР (АКТУАЛЬНЫЙ СИНТАКСИС)
+width = (0, 300)
+height = (0, 300)
+offset = (20, 40)
+origin = top-right
+notification_limit = 5
+
+### ОТСТУПЫ
+padding = 10
+horizontal_padding = 10
+gap_size = 8
+
+### РАМКА
+frame_width = 2
+frame_color = "#ff4f9a"
+separator_color = frame
+
+### ЦВЕТА
 background = "#141414"
 foreground = "#e6e6e6"
-frame_color = "#ff4f9a"
-corner_radius = 10
+
+### СТИЛЬ
+corner_radius = 6
+transparency = 10
+
+### ТЕКСТ
+alignment = left
+word_wrap = yes
+ellipsize = middle
+line_height = 2
+markup = full
+show_age_threshold = 60
+
+### ПОВЕДЕНИЕ
+timeout = 5
+idle_threshold = 120
+stack_duplicates = true
+hide_duplicate_count = false
+
+### ИКОНКИ
+icon_position = left
+max_icon_size = 32
+
+### ИСТОРИЯ
+history_length = 20
+sticky_history = yes
+
+### МЫШЬ
+mouse_left_click = close_current
+mouse_middle_click = close_all
+mouse_right_click = do_action
+
+
+[urgency_low]
+background = "#141414"
+foreground = "#6c7086"
+timeout = 3
+
+[urgency_normal]
+background = "#141414"
+foreground = "#e6e6e6"
+timeout = 5
+
+[urgency_critical]
+background = "#ff003c"
+foreground = "#ffffff"
+frame_color = "#ff003c"
+timeout = 0
