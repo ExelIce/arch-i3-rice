@@ -248,6 +248,21 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning \
 -B 'Yes, exit i3' 'i3-msg exit'"
 
 
+############################################
+#              Player Control
+###########################################
+
+
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioStop exec playerctl stop
+
+bindsym $mod+Shift+p exec playerctl play-pause
+bindsym $mod+Shift+n exec playerctl next
+bindsym $mod+Shift+b exec playerctl previous
+
+
 #############################################
 #               RESIZE MODE
 #############################################
@@ -270,3 +285,4 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
