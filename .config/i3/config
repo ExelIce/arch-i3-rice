@@ -69,6 +69,8 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # Keyboard layout
 exec --no-startup-id setxkbmap -layout us,ru,kz -option grp:win_space_toggle
 
+# powermenu 
+bindsym $mod+p exec --no-startup-id ~/.config/rofi/power-profile.sh
 
 
 #############################################
@@ -94,8 +96,8 @@ bindsym Ctrl+Print exec --no-startup-id flameshot gui --clipboard
 
 set $refresh_i3status killall -SIGUSR1 i3status
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
@@ -103,8 +105,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 #              BRIGHRNESSCTL
 ################################################
 
-bindsym XF86MonBrightnessUp exec brightnessctl set +10%
-bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 #############################################
 #               APPLICATIONS
@@ -148,10 +150,10 @@ bindsym $mod+a focus parent
 #               FOCUS WINDOWS
 #############################################
 
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # Arrow keys
 bindsym $mod+Left focus left
@@ -164,10 +166,10 @@ bindsym $mod+Right focus right
 #               MOVE WINDOWS
 #############################################
 
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+colon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+#bindsym $mod+Shift+l move right
 
 # Arrow keys
 bindsym $mod+Shift+Left move left
@@ -181,15 +183,15 @@ bindsym $mod+Shift+Right move right
 #############################################
 
 # Split
-bindsym $mod+h split h
-bindsym $mod+v split v
+bindsym $mod+Ctrl+h split h
+bindsym $mod+Ctrl+v split v
 
 # Layouts
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 
 # Toggle focus mode
-#bindsym $mod+space focus mode_toggle
+bindsym $mod+space focus mode_toggle
 
 
 #############################################
