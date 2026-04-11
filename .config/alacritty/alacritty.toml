@@ -12,6 +12,11 @@ size = 11
 [font.normal]
 family = "JetBrainsMono Nerd Font"
 
+[colors.selection]
+
+text = "#0b0b0b"
+background = "#ff4f9a"
+
 [colors.primary]
 
 background = "#0b0b0b"

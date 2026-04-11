@@ -114,6 +114,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 # Terminal
 bindsym $mod+Return exec $term
+for_window [class="Alacritty"] border pixel 3
 
 # Launcher
 bindsym $mod+d exec --no-startup-id rofi -show drun
