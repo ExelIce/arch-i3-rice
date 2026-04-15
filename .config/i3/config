@@ -129,7 +129,11 @@ bindsym $mod+b exec $browser
 # Power menu
 bindsym XF86PowerOff exec ~/.config/rofi/powermenu.sh
 
+# Network Manager
+bindsym $mod+n exec --no-startup-id ronema
 
+# Telegram
+bindsym $mod+t exec --no-startup-id Telegram
 #############################################
 #               WINDOW CONTROL
 #############################################
