@@ -49,6 +49,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id /usr/bin/lxqt-policykit-agent
+exec_always --no-startup-id autotiling --limit 2 --splitratio 1.61
 
 # DPMS timeouts
 exec_always --no-startup-id xset s 300 0
@@ -57,8 +58,6 @@ exec_always --no-startup-id xset dpms 0 0 300
 # xss-lock
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/i3/lock.sh
 
-#lock bind
-bindsym $mod+Shift+z exec --no-startup-id ~/.config/i3/lock.sh
 
 # Wallpaper
 exec_always --no-startup-id feh --bg-fill ~/arch-i3-rice/wallpapers/wp11886213-3827729853.jpg
@@ -121,7 +120,7 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+Shift+d exec --no-startup-id rofi -show window
 
 # File manager
-bindsym $mod+e exec $f_manager
+bindsym $mod+e exec --no-startup-id $f_manager
 
 # Browser
 bindsym $mod+b exec $browser
@@ -134,9 +133,40 @@ bindsym $mod+n exec --no-startup-id ronema
 
 # Telegram
 bindsym $mod+t exec --no-startup-id Telegram
+
+# Bluetooth-manager
+bindsym $mod+c exec --no-startup-id rofi-bluetooth
+
+
+#############################################
+#       ASSIGN APPLICATIONS TO WORKSPACES
+#############################################
+
+# Workspace1
+for_window [class="Vivaldi-stable"] move to workspace $ws1, workspace $ws1
+# Workspace 2
+assign [class="virt-manager"] $ws2
+for_window [class="virt-manager"] move to workspace $ws2, workspace $ws2
+# Workspace 3
+for_window [class="code-oss"] move to workspace $ws3, workspace $ws3
+# Workpace 4
+for_window [class="DesktopEditors"] move to workspace $ws4, workspace $ws4
+# Workpace 5
+# Workpace 6
+# Workpace 7
+# Workpace 8
+for_window [class="discord"] move to workspace $ws8, workspace $ws8
+for_window [class="Telegram"] move to workspace $ws8, workspace $ws8
+# Workpace 9
+# Workpace 10
+assign [class="Spotify"] $ws10
+assign [class="crx_agimnkijcaahngcdmfeangaknmldooml"] $ws10
+
+
 #############################################
 #               WINDOW CONTROL
 #############################################
+
 
 # Kill window
 bindsym $mod+Shift+q kill
@@ -145,10 +175,25 @@ bindsym $mod+Shift+q kill
 bindsym $mod+f fullscreen toggle
 
 # Floating
-bindsym $mod+Shift+space floating toggle
+bindsym Mod1+Shift+space floating toggle
 
 # Focus parent
 bindsym $mod+a focus parent
+
+# Sticky toggle
+bindsym $mod+Shift+s sticky toggle; exec --no-startup-id dunstify -u low -t 1000 "Sticky" "Toggled"
+
+
+#############################################
+#            SCRATCHPADS
+#############################################
+
+for_window [class="ScratchTerm"] floating enable, resize set 1000 600, border pixel 5, move scratchpad
+bindsym $mod+u exec --no-startup-id ~/.config/i3/scratchpad.sh
+
+
+bindsym $mod+minus move scratchpad
+bindsym $mod+equal scratchpad show, move position center
 
 
 #############################################
@@ -196,7 +241,7 @@ bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 
 # Toggle focus mode
-bindsym $mod+space focus mode_toggle
+bindsym Mod1+space focus mode_toggle
 
 
 #############################################
